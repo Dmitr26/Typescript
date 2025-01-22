@@ -1,0 +1,16 @@
+{
+  "name": "level6",
+  "version": "1.0.0",
+  "description": "shpp project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf -rf ./dist && tsc",
+    "start": "node dist/index.js"
+  },
+  "author": "dmitr26",
+  "license": "ISC",
+  "dependencies": {
+    "rimraf": "^6.0.1"
+  }
+}
