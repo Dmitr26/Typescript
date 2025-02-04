@@ -132,9 +132,8 @@ interface Options {
 function summ(a: Options): number {
     const x = Object.keys(a).map((k) => {
         const elem = a[k];
-        if (typeof elem === 'undefined' || typeof elem.cvalue === 'undefined') return 2021;
-        // undefined -> 'undefined'
-        // added '|| typeof elem.cvalue === 'undefined''        
+        if (!elem?.cvalue) return 2021;
+        // (typeof elem === undefined) -> (!elem?.cvalue)    
         if (typeof elem.cvalue === 'string') return +elem.cvalue || 2021;
         // 'String' -> 'string'
         // '2021' -> 2021
